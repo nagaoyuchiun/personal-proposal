@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人提案集 | Personal Proposals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: rgba(129, 140, 248, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-folder-open text-indigo-500 text-2xl"></i>
+                    <a href="/" class="font-bold text-xl tracking-tight text-white hover:text-indigo-400 transition-colors">個人提案集</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/" class="hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">首頁</a>
+                    <a href="#proposals" class="hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">提案列表</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-t border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block hover:bg-slate-800 hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors">首頁</a>
+                <a href="#proposals" class="block hover:bg-slate-800 hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors">提案列表</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 opacity-30">
+             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+             <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style="animation-delay: 2s"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-medium mb-8">
+                <span class="flex h-2 w-2 rounded-full bg-indigo-400 mr-2 animate-ping"></span>
+                持續更新中
+            </div>
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl mb-6">
+                個人提案集<br>
+                <span class="gradient-text">創新思維 · 解決方案 · 實踐計畫</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
+                收錄各類提案文件，從技術賦能到創新專案，每份提案都承載著對改善與創新的追求。
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#proposals" class="px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-105">
+                    查看提案
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposals Section -->
+    <section id="proposals" class="py-16 bg-slate-900 relative border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-indigo-400 font-semibold tracking-wide uppercase">Proposals Collection</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    提案列表
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">
+                    點擊任一提案卡片，查看完整內容與詳細規劃。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Proposal Card: AI Developer Enablement Program -->
+                <a href="page/AI Developer Enablement Program.html" class="glass-card p-6 rounded-xl block group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-indigo-900/50 rounded-lg flex items-center justify-center group-hover:bg-indigo-600/50 transition-colors">
+                            <i class="fa-solid fa-robot text-indigo-400 text-2xl group-hover:text-indigo-300"></i>
+                        </div>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-medium border border-emerald-500/30">
+                            <i class="fa-solid fa-check-circle mr-1"></i> 已完成
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">AI 開發者賦能計畫</h3>
+                    <p class="text-slate-400 text-sm mb-4">從協作架構到工作流自動化，全面升級開發團隊的 AI 應用能力。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-800 rounded text-xs text-indigo-300">AI Training</span>
+                        <span class="px-2 py-1 bg-slate-800 rounded text-xs text-purple-300">GitHub Copilot</span>
+                        <span class="px-2 py-1 bg-slate-800 rounded text-xs text-emerald-300">Workflow</span>
+                    </div>
+                    <div class="mt-4 flex items-center text-indigo-400 text-sm font-medium group-hover:text-indigo-300">
+                        查看詳情 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- Placeholder Card for Future Proposals -->
+                <div class="glass-card p-6 rounded-xl opacity-60 cursor-not-allowed">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-lightbulb text-slate-500 text-2xl"></i>
+                        </div>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-slate-700/50 text-slate-500 text-xs font-medium">
+                            <i class="fa-solid fa-clock mr-1"></i> 籌備中
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-500 mb-2">更多提案</h3>
+                    <p class="text-slate-500 text-sm mb-4">敬請期待下一個創新提案...</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-600">Coming Soon</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl opacity-60 cursor-not-allowed">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-rocket text-slate-500 text-2xl"></i>
+                        </div>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-slate-700/50 text-slate-500 text-xs font-medium">
+                            <i class="fa-solid fa-clock mr-1"></i> 籌備中
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-500 mb-2">更多提案</h3>
+                    <p class="text-slate-500 text-sm mb-4">敬請期待下一個創新提案...</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-600">Coming Soon</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-slate-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-indigo-400 mb-2">1</div>
+                    <div class="text-slate-400">已完成提案</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-purple-400 mb-2">∞</div>
+                    <div class="text-slate-400">創新思維</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">100%</div>
+                    <div class="text-slate-400">實踐決心</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-6">關於本站</h2>
+            <p class="text-lg text-slate-400 mb-4">
+                這是一個收錄個人提案的靜態網站，使用 GitHub Pages 進行部署。
+            </p>
+            <p class="text-slate-400">
+                每個提案都經過深思熟慮的規劃與設計，期望能為團隊與專案帶來實質的改善與創新。
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-folder-open text-indigo-500"></i>
+                    <span class="font-bold text-white">Personal Proposals</span>
+                </div>
+                <p class="text-slate-500 text-sm">Innovative ideas, practical solutions.</p>
+            </div>
+            <div class="text-slate-500 text-sm">
+                &copy; 2025 個人提案集. Powered by GitHub Pages.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
